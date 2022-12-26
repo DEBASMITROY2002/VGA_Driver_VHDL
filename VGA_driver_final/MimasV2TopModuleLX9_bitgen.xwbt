@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/deb/Downloads/VGA_driver_final/MimasV2TopModuleLX9.ncd
+OUTFILE=/home/deb/Downloads/VGA_driver_final/MimasV2TopModuleLX9.bit
+FAMILY=Spartan6
+PART=xc6slx9-2csg324
+WORKINGDIR=/home/deb/Downloads/VGA_driver_final
+LICENSE=WebPack
+USER_INFO=212621290_0_0_956

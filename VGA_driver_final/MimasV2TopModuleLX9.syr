@@ -1,0 +1,525 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: MimasV2TopModuleLX9.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "MimasV2TopModuleLX9.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "MimasV2TopModuleLX9"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-csg324
+
+---- Source Options
+Top Module Name                    : MimasV2TopModuleLX9
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/deb/Downloads/VGA_driver_final/VGAOut.vhd" into library work
+Parsing entity <VGAOut>.
+Parsing architecture <Behavioral> of entity <vgaout>.
+Parsing VHDL file "/home/deb/Downloads/VGA_driver_final/MimasV2VGADisplay.vhd" into library work
+Parsing entity <MimasV2VGADisplay>.
+Parsing architecture <Behavioral> of entity <mimasv2vgadisplay>.
+Parsing VHDL file "/home/deb/Desktop/clocking.vhd" into library work
+Parsing entity <clocking>.
+Parsing architecture <xilinx> of entity <clocking>.
+Parsing VHDL file "/home/deb/Downloads/VGA_driver_final/MimasV2TopModuleLX9.vhd" into library work
+Parsing entity <MimasV2TopModuleLX9>.
+Parsing architecture <Behavioral> of entity <mimasv2topmodulelx9>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <MimasV2TopModuleLX9> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <clocking> (architecture <xilinx>) from library <work>.
+
+Elaborating entity <MimasV2VGADisplay> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <VGAOut> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:871 - "/home/deb/Downloads/VGA_driver_final/VGAOut.vhd" Line 23: Using initial value 100 for x since it is never assigned
+WARNING:HDLCompiler:871 - "/home/deb/Downloads/VGA_driver_final/VGAOut.vhd" Line 24: Using initial value 80 for y since it is never assigned
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <MimasV2TopModuleLX9>.
+    Related source file is "/home/deb/Downloads/VGA_driver_final/MimasV2TopModuleLX9.vhd".
+        BoardDescription = "NUMATO LAB Mimas V2"
+        DeviceDescripition = "SPARTAN6 LX9"
+        ClockFrequency = 100000000
+        NumberOfDIPSwitch = 8
+        NumberOfPushButtonSwitch = 6
+        NumberOfLEDs = 8
+        NumberOfEachPortIOs = 8
+        VGAResolution = "640x480 @ 60Hz"
+        NumberOfVGAColor = 3
+        NumberOfSevenSegmentModule = 3
+        SevenSegmentLED = 8
+WARNING:Xst:647 - Input <DPSwitch> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <Switch> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/deb/Downloads/VGA_driver_final/MimasV2TopModuleLX9.vhd" line 79: Output port <CLK_100MHz> of the instance <clocking_Instant> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <MimasV2TopModuleLX9> synthesized.
+
+Synthesizing Unit <clocking>.
+    Related source file is "/home/deb/Desktop/clocking.vhd".
+    Summary:
+	no macro.
+Unit <clocking> synthesized.
+
+Synthesizing Unit <MimasV2VGADisplay>.
+    Related source file is "/home/deb/Downloads/VGA_driver_final/MimasV2VGADisplay.vhd".
+        VGAResolution = "640x480 @ 60Hz"
+        NumberOfVGAColor = 3
+    Found 10-bit register for signal <vCount>.
+    Found 10-bit register for signal <hCount>.
+    Found 10-bit register for signal <nextHCount>.
+    Found 10-bit register for signal <nextVCount>.
+    Found 1-bit register for signal <VSync>.
+    Found 1-bit register for signal <HSync>.
+    Found 3-bit register for signal <Red>.
+    Found 3-bit register for signal <Green>.
+    Found 2-bit register for signal <Blue>.
+    Found 1-bit register for signal <vgasignal.divide_by_2>.
+    Found 10-bit adder for signal <vCount[9]_GND_14_o_add_2_OUT> created at line 71.
+    Found 10-bit adder for signal <hCount[9]_GND_14_o_add_11_OUT> created at line 87.
+    Found 10-bit comparator lessequal for signal <n0013> created at line 91
+    Found 10-bit comparator greater for signal <vCount[9]_GND_14_o_LessThan_16_o> created at line 91
+    Found 10-bit comparator lessequal for signal <n0018> created at line 98
+    Found 10-bit comparator greater for signal <hCount[9]_PWR_9_o_LessThan_18_o> created at line 98
+    Found 10-bit comparator greater for signal <hCount[9]_PWR_9_o_LessThan_19_o> created at line 105
+    Found 10-bit comparator greater for signal <vCount[9]_GND_14_o_LessThan_20_o> created at line 105
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  51 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   2 Multiplexer(s).
+Unit <MimasV2VGADisplay> synthesized.
+
+Synthesizing Unit <VGAOut>.
+    Related source file is "/home/deb/Downloads/VGA_driver_final/VGAOut.vhd".
+        OutputWidth = 10
+        OutputHeight = 40
+    Found 8-bit register for signal <pixels>.
+    Found 10-bit comparator lessequal for signal <n0000> created at line 31
+    Found 10-bit comparator greater for signal <hcounter[9]_GND_15_o_LessThan_2_o> created at line 31
+    Found 10-bit comparator lessequal for signal <n0003> created at line 31
+    Found 10-bit comparator greater for signal <vcounter[9]_GND_15_o_LessThan_4_o> created at line 31
+    Found 10-bit comparator greater for signal <hcounter[9]_GND_15_o_LessThan_6_o> created at line 32
+    Found 10-bit comparator greater for signal <vcounter[9]_GND_15_o_LessThan_8_o> created at line 32
+    Found 10-bit comparator lessequal for signal <n0017> created at line 33
+    Found 10-bit comparator lessequal for signal <n0023> created at line 34
+    Found 10-bit comparator greater for signal <hcounter[9]_GND_15_o_LessThan_14_o> created at line 34
+    Found 10-bit comparator lessequal for signal <n0026> created at line 34
+    Found 10-bit comparator greater for signal <hcounter[9]_GND_15_o_LessThan_18_o> created at line 35
+    Found 10-bit comparator lessequal for signal <n0037> created at line 36
+    Found 10-bit comparator lessequal for signal <n0043> created at line 37
+    Found 10-bit comparator greater for signal <hcounter[9]_GND_15_o_LessThan_26_o> created at line 37
+    Found 10-bit comparator lessequal for signal <n0050> created at line 38
+    Found 10-bit comparator greater for signal <hcounter[9]_GND_15_o_LessThan_30_o> created at line 38
+    Found 10-bit comparator lessequal for signal <n0057> created at line 39
+    Found 10-bit comparator greater for signal <hcounter[9]_GND_15_o_LessThan_34_o> created at line 39
+    Found 10-bit comparator lessequal for signal <n0068> created at line 41
+    Found 10-bit comparator greater for signal <hcounter[9]_GND_15_o_LessThan_42_o> created at line 41
+    Found 10-bit comparator lessequal for signal <n0075> created at line 42
+    Found 10-bit comparator greater for signal <vcounter[9]_GND_15_o_LessThan_48_o> created at line 42
+    Found 10-bit comparator greater for signal <hcounter[9]_GND_15_o_LessThan_50_o> created at line 43
+    Found 10-bit comparator lessequal for signal <n0086> created at line 44
+    Found 10-bit comparator lessequal for signal <n0092> created at line 45
+    Found 10-bit comparator greater for signal <hcounter[9]_GND_15_o_LessThan_58_o> created at line 45
+    Found 10-bit comparator lessequal for signal <n0099> created at line 46
+    Found 10-bit comparator greater for signal <hcounter[9]_GND_15_o_LessThan_62_o> created at line 46
+    Found 10-bit comparator lessequal for signal <n0106> created at line 47
+    Found 10-bit comparator greater for signal <hcounter[9]_GND_15_o_LessThan_66_o> created at line 47
+    Found 10-bit comparator greater for signal <hcounter[9]_GND_15_o_LessThan_74_o> created at line 49
+    Found 10-bit comparator lessequal for signal <n0121> created at line 50
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred  32 Comparator(s).
+Unit <VGAOut> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 10-bit adder                                          : 2
+# Registers                                            : 11
+ 1-bit register                                        : 3
+ 10-bit register                                       : 4
+ 2-bit register                                        : 1
+ 3-bit register                                        : 2
+ 8-bit register                                        : 1
+# Comparators                                          : 38
+ 10-bit comparator greater                             : 20
+ 10-bit comparator lessequal                           : 18
+# Multiplexers                                         : 2
+ 10-bit 2-to-1 multiplexer                             : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <pixels_4> in Unit <output> is equivalent to the following 3 FFs/Latches, which will be removed : <pixels_5> <pixels_6> <pixels_7> 
+INFO:Xst:2261 - The FF/Latch <pixels_0> in Unit <output> is equivalent to the following 3 FFs/Latches, which will be removed : <pixels_1> <pixels_2> <pixels_3> 
+WARNING:Xst:1710 - FF/Latch <pixels_0> (without init value) has a constant value of 0 in block <output>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Green_0> (without init value) has a constant value of 0 in block <VGA_instant>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Green_1> (without init value) has a constant value of 0 in block <VGA_instant>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Blue_1> (without init value) has a constant value of 0 in block <VGA_instant>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <Blue_2> (without init value) has a constant value of 0 in block <VGA_instant>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 10-bit adder                                          : 2
+# Registers                                            : 59
+ Flip-Flops                                            : 59
+# Comparators                                          : 38
+ 10-bit comparator greater                             : 20
+ 10-bit comparator lessequal                           : 18
+# Multiplexers                                         : 2
+ 10-bit 2-to-1 multiplexer                             : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <pixels_0> (without init value) has a constant value of 0 in block <VGAOut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixels_1> (without init value) has a constant value of 0 in block <VGAOut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixels_2> (without init value) has a constant value of 0 in block <VGAOut>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pixels_3> (without init value) has a constant value of 0 in block <VGAOut>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <pixels_4> in Unit <VGAOut> is equivalent to the following 3 FFs/Latches, which will be removed : <pixels_5> <pixels_6> <pixels_7> 
+
+Optimizing unit <MimasV2TopModuleLX9> ...
+
+Optimizing unit <MimasV2VGADisplay> ...
+
+Optimizing unit <VGAOut> ...
+WARNING:Xst:1710 - FF/Latch <VGA_instant/Blue_2> (without init value) has a constant value of 0 in block <MimasV2TopModuleLX9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <VGA_instant/Blue_1> (without init value) has a constant value of 0 in block <MimasV2TopModuleLX9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <VGA_instant/Green_1> (without init value) has a constant value of 0 in block <MimasV2TopModuleLX9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <VGA_instant/Green_0> (without init value) has a constant value of 0 in block <MimasV2TopModuleLX9>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <VGA_instant/Green_2> in Unit <MimasV2TopModuleLX9> is equivalent to the following 3 FFs/Latches, which will be removed : <VGA_instant/Red_2> <VGA_instant/Red_1> <VGA_instant/Red_0> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block MimasV2TopModuleLX9, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 45
+ Flip-Flops                                            : 45
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : MimasV2TopModuleLX9.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 133
+#      GND                         : 1
+#      INV                         : 3
+#      LUT2                        : 12
+#      LUT3                        : 14
+#      LUT4                        : 20
+#      LUT5                        : 29
+#      LUT6                        : 52
+#      MUXF7                       : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 45
+#      FD                          : 10
+#      FDCE                        : 14
+#      FDE                         : 7
+#      FDPE                        : 6
+#      FDRE                        : 8
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 12
+#      IBUF                        : 1
+#      IBUFG                       : 1
+#      OBUF                        : 10
+# DCMs                             : 1
+#      DCM_SP                      : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9csg324-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              45  out of  11440     0%  
+ Number of Slice LUTs:                  130  out of   5720     2%  
+    Number used as Logic:               130  out of   5720     2%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    131
+   Number with an unused Flip Flop:      86  out of    131    65%  
+   Number with an unused LUT:             1  out of    131     0%  
+   Number of fully used LUT-FF pairs:    44  out of    131    33%  
+   Number of unique control sets:         9
+
+IO Utilization: 
+ Number of IOs:                          26
+ Number of bonded IOBs:                  12  out of    200     6%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | DCM_SP:CLKDV           | 45    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 3.243ns (Maximum Frequency: 308.356MHz)
+   Minimum input arrival time before clock: 6.155ns
+   Maximum output required time after clock: 4.240ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 3.243ns (frequency: 308.356MHz)
+  Total number of paths / destination ports: 1307 / 87
+-------------------------------------------------------------------------
+Delay:               6.486ns (Levels of Logic = 4)
+  Source:            VGA_instant/nextHCount_1 (FF)
+  Destination:       VGA_instant/nextVCount_2 (FF)
+  Source Clock:      CLK rising 0.5X
+  Destination Clock: CLK rising 0.5X
+
+  Data Path: VGA_instant/nextHCount_1 to VGA_instant/nextVCount_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            13   0.525   1.528  VGA_instant/nextHCount_1 (VGA_instant/nextHCount_1)
+     LUT6:I1->O            2   0.254   0.726  VGA_instant/_n010311 (VGA_instant/_n010311)
+     LUT5:I4->O           20   0.254   1.286  VGA_instant/_n010313 (VGA_instant/_n01031)
+     LUT6:I5->O            6   0.254   1.331  VGA_instant/_n0103 (VGA_instant/_n0103)
+     LUT6:I0->O            1   0.254   0.000  VGA_instant/nextVCount_2_rstpot (VGA_instant/nextVCount_2_rstpot)
+     FD:D                      0.074          VGA_instant/nextVCount_2
+    ----------------------------------------
+    Total                      6.486ns (1.615ns logic, 4.871ns route)
+                                       (24.9% logic, 75.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 60 / 52
+-------------------------------------------------------------------------
+Offset:              6.155ns (Levels of Logic = 4)
+  Source:            RST_n (PAD)
+  Destination:       VGA_instant/nextVCount_2 (FF)
+  Destination Clock: CLK rising 0.5X
+
+  Data Path: RST_n to VGA_instant/nextVCount_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.328   1.374  RST_n_IBUF (RST_n_IBUF)
+     LUT5:I0->O           20   0.254   1.286  VGA_instant/_n010313 (VGA_instant/_n01031)
+     LUT6:I5->O            6   0.254   1.331  VGA_instant/_n0103 (VGA_instant/_n0103)
+     LUT6:I0->O            1   0.254   0.000  VGA_instant/nextVCount_2_rstpot (VGA_instant/nextVCount_2_rstpot)
+     FD:D                      0.074          VGA_instant/nextVCount_2
+    ----------------------------------------
+    Total                      6.155ns (2.164ns logic, 3.991ns route)
+                                       (35.2% logic, 64.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              4.240ns (Levels of Logic = 1)
+  Source:            VGA_instant/Green_2 (FF)
+  Destination:       Red<2> (PAD)
+  Source Clock:      CLK rising 0.5X
+
+  Data Path: VGA_instant/Green_2 to Red<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             4   0.525   0.803  VGA_instant/Green_2 (VGA_instant/Green_2)
+     OBUF:I->O                 2.912          Red_2_OBUF (Red<2>)
+    ----------------------------------------
+    Total                      4.240ns (3.437ns logic, 0.803ns route)
+                                       (81.1% logic, 18.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    6.486|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.77 secs
+ 
+--> 
+
+
+Total memory usage is 401824 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   17 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

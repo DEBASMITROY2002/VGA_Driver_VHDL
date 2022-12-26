@@ -1,0 +1,34 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Dec 27 00:11:23 2022
+//! **************************************************************************
+
+SCHEMATIC START;
+CONFIG VCCAUX = "3.3";
+COMP "VSync" LOCATE = SITE "A12" LEVEL 1;
+COMP "DPSwitch<0>" LOCATE = SITE "C17" LEVEL 1;
+COMP "DPSwitch<1>" LOCATE = SITE "C18" LEVEL 1;
+COMP "Switch<0>" LOCATE = SITE "M18" LEVEL 1;
+COMP "DPSwitch<2>" LOCATE = SITE "D17" LEVEL 1;
+COMP "Switch<1>" LOCATE = SITE "L18" LEVEL 1;
+COMP "DPSwitch<3>" LOCATE = SITE "D18" LEVEL 1;
+COMP "Switch<2>" LOCATE = SITE "M16" LEVEL 1;
+COMP "DPSwitch<4>" LOCATE = SITE "E18" LEVEL 1;
+COMP "Switch<3>" LOCATE = SITE "L17" LEVEL 1;
+COMP "DPSwitch<5>" LOCATE = SITE "E16" LEVEL 1;
+COMP "Switch<4>" LOCATE = SITE "K17" LEVEL 1;
+COMP "DPSwitch<6>" LOCATE = SITE "F18" LEVEL 1;
+COMP "Switch<5>" LOCATE = SITE "K18" LEVEL 1;
+COMP "DPSwitch<7>" LOCATE = SITE "F17" LEVEL 1;
+COMP "Blue<1>" LOCATE = SITE "B11" LEVEL 1;
+COMP "Blue<2>" LOCATE = SITE "A11" LEVEL 1;
+COMP "Red<0>" LOCATE = SITE "A9" LEVEL 1;
+COMP "Red<1>" LOCATE = SITE "B9" LEVEL 1;
+COMP "Green<0>" LOCATE = SITE "C10" LEVEL 1;
+COMP "Red<2>" LOCATE = SITE "C9" LEVEL 1;
+COMP "Green<1>" LOCATE = SITE "A10" LEVEL 1;
+COMP "CLK" LOCATE = SITE "V10" LEVEL 1;
+COMP "Green<2>" LOCATE = SITE "C11" LEVEL 1;
+COMP "HSync" LOCATE = SITE "B12" LEVEL 1;
+NET "clocking_Instant/clkin1" PERIOD = 10 ns HIGH 50%;
+SCHEMATIC END;
+

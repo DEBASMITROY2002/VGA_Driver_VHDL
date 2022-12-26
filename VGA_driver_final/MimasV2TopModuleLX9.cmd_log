@@ -1,0 +1,12 @@
+xst -intstyle ise -filter "/home/deb/Downloads/VGA_driver_final/iseconfig/filter.filter" -ifn "/home/deb/Downloads/VGA_driver_final/MimasV2TopModuleLX9.xst" -ofn "/home/deb/Downloads/VGA_driver_final/MimasV2TopModuleLX9.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc /home/deb/Desktop/MimasV2.ucf -p xc6slx9-csg324-2 MimasV2TopModuleLX9.ngc MimasV2TopModuleLX9.ngd  
+map -filter "/home/deb/Downloads/VGA_driver_final/iseconfig/filter.filter" -intstyle ise -p xc6slx9-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MimasV2TopModuleLX9_map.ncd MimasV2TopModuleLX9.ngd MimasV2TopModuleLX9.pcf 
+par -filter "/home/deb/Downloads/VGA_driver_final/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off MimasV2TopModuleLX9_map.ncd MimasV2TopModuleLX9.ncd MimasV2TopModuleLX9.pcf 
+trce -filter /home/deb/Downloads/VGA_driver_final/iseconfig/filter.filter -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MimasV2TopModuleLX9.twx MimasV2TopModuleLX9.ncd -o MimasV2TopModuleLX9.twr MimasV2TopModuleLX9.pcf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f MimasV2TopModuleLX9.ut MimasV2TopModuleLX9.ncd 
+xst -intstyle ise -filter "/home/deb/Downloads/VGA_driver_final/iseconfig/filter.filter" -ifn "/home/deb/Downloads/VGA_driver_final/MimasV2TopModuleLX9.xst" -ofn "/home/deb/Downloads/VGA_driver_final/MimasV2TopModuleLX9.syr" 
+ngdbuild -filter "iseconfig/filter.filter" -intstyle ise -dd _ngo -nt timestamp -uc /home/deb/Desktop/MimasV2.ucf -p xc6slx9-csg324-2 MimasV2TopModuleLX9.ngc MimasV2TopModuleLX9.ngd  
+map -filter "/home/deb/Downloads/VGA_driver_final/iseconfig/filter.filter" -intstyle ise -p xc6slx9-csg324-2 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MimasV2TopModuleLX9_map.ncd MimasV2TopModuleLX9.ngd MimasV2TopModuleLX9.pcf 
+par -filter "/home/deb/Downloads/VGA_driver_final/iseconfig/filter.filter" -w -intstyle ise -ol high -mt off MimasV2TopModuleLX9_map.ncd MimasV2TopModuleLX9.ncd MimasV2TopModuleLX9.pcf 
+trce -filter /home/deb/Downloads/VGA_driver_final/iseconfig/filter.filter -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml MimasV2TopModuleLX9.twx MimasV2TopModuleLX9.ncd -o MimasV2TopModuleLX9.twr MimasV2TopModuleLX9.pcf 
+bitgen -filter "iseconfig/filter.filter" -intstyle ise -f MimasV2TopModuleLX9.ut MimasV2TopModuleLX9.ncd 

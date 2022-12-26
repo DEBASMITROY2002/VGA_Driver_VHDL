@@ -1,0 +1,4 @@
+vhdl work "VGAOut.vhd"
+vhdl work "MimasV2VGADisplay.vhd"
+vhdl work "../../Desktop/clocking.vhd"
+vhdl work "MimasV2TopModuleLX9.vhd"
