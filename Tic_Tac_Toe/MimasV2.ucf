@@ -1,0 +1,92 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+# This file is a .ucf for Mimas V2                                                                    #
+# To use it in your project :                                                                         #
+# * Remove or comment the lines corresponding to unused pins in the project                           #
+# * Rename the used signals according to the your project                                             #
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++#
+
+#**************************************************************************************************************************************************#
+#                                            UCF for Waxwing Spartan 6 Development Board                                                           #
+#**************************************************************************************************************************************************#
+
+CONFIG VCCAUX = "3.3" ;
+
+   NET "CLK"      LOC = V10 | IOSTANDARD = LVCMOS33 | PERIOD = 100MHz;
+
+   NET "RST_n"       IOSTANDARD = LVCMOS33 | PULLUP;
+
+
+###################################################################################################################################################
+#                                                 DIP Switches                                                                                    #
+################################################################################################################################################### 
+    NET "DPSwitch[0]"         LOC = C17  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;
+    NET "DPSwitch[1]"         LOC = C18  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP;
+    NET "DPSwitch[2]"         LOC = D17  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
+    NET "DPSwitch[3]"         LOC = D18  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
+    NET "DPSwitch[4]"         LOC = E18  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
+    NET "DPSwitch[5]"         LOC = E16  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
+    NET "DPSwitch[6]"         LOC = F18  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
+    NET "DPSwitch[7]"         LOC = F17  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
+	 
+###################################################################################################################################################
+#                                              Push Buttons Switches                                                                              #
+################################################################################################################################################### 
+    NET "Switch[0]"           LOC = M18   | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
+    NET "Switch[1]"           LOC = L18   | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
+    NET "Switch[2]"           LOC = M16   | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
+    NET "Switch[3]"           LOC = L17   | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
+    NET "Switch[4]"           LOC = K17   | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
+    NET "Switch[5]"           LOC = K18   | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST | PULLUP; 
+     
+###################################################################################################################################################
+#                                                    LEDs                                                                                         #
+################################################################################################################################################### 
+#    NET "LED[0]"              LOC = P15  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+#    NET "LED[1]"              LOC = P16  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+#    NET "LED[2]"              LOC = N15  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+#   NET "LED[3]"              LOC = N16  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+#   NET "LED[4]"              LOC = U17  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+#   NET "LED[5]"              LOC = U18  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+#   NET "LED[6]"              LOC = T17  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+#   NET "LED[7]"              LOC = T18  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+
+###################################################################################################################################################
+#                                               Seven Segment Display                                                                             #
+################################################################################################################################################### 
+#    NET "SevenSegment[0]"     LOC = A5  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+#    NET "SevenSegment[1]"     LOC = C6  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+#    NET "SevenSegment[2]"     LOC = D6  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+#	 NET "SevenSegment[3]"     LOC = C5  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+#   NET "SevenSegment[4]"     LOC = C4  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+#    NET "SevenSegment[5]"     LOC = A4  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+#	 NET "SevenSegment[6]"     LOC = B4  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+#	 NET "SevenSegment[7]"     LOC = A3  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+	 
+#   NET "SevenSegmentEnable[2]"           LOC = B3  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;                              # Enables for Seven Segment
+#   NET "SevenSegmentEnable[1]"           LOC = A2  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+#   NET "SevenSegmentEnable[0]"           LOC = B2  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+
+###################################################################################################################################################
+#                                                    Audio                                                                                        #
+################################################################################################################################################### 
+#    NET "Audio1"              LOC = B16  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;                 
+#    NET "Audio2"              LOC = A16  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+     
+###################################################################################################################################################
+#                                                    VGA                                                                                          #
+################################################################################################################################################### 
+    NET "HSync"               LOC = B12  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+    NET "VSync"               LOC = A12  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+
+    NET "Red[2]"              LOC = C9   | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+    NET "Red[1]"              LOC = B9   | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+    NET "Red[0]"              LOC = A9   | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+
+    NET "Green[2]"            LOC = C11  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+    NET "Green[1]"            LOC = A10  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+    NET "Green[0]"            LOC = C10  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+
+    NET "Blue[2]"             LOC = A11  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+    NET "Blue[1]"             LOC = B11  | IOSTANDARD = LVCMOS33 | DRIVE = 8 | SLEW = FAST ;
+
+ 
