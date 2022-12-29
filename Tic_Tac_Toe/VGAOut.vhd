@@ -91,7 +91,7 @@ begin
 								-- BOard Blinks at 1Hz after win
 							  if clock_1_Hz='1' then
 										--if flagc = 0 then
-											if OVER =  1 and (( ((hcounter>155)and(hcounter<165)) or ((hcounter>475)and(hcounter<485)) ) 	or
+											if OVER = 1 and (( ((hcounter>155)and(hcounter<165)) or ((hcounter>475)and(hcounter<485)) ) 	or
 											( ((vcounter>115)and(vcounter<125)) or ((vcounter>355)and(vcounter<365)) )	)									
 											then
 											pixels <= x"FF";
@@ -329,10 +329,14 @@ begin
 							
 							-- WINNING CONDITION
 							
-							if a11 /= 0 and (
-								(a00 = a11 and a11 = a22) or
-								(a02 = a11 and a11 = a20) 
-							)then
+							if (a11/=0 and ((a00 = a11 and a11 = a22) or(a02 = a11 and a11 = a20)))
+								or
+								(a00/=0 and ((a00=a10 and a00 = a20) or (a00=a01 and a00=a02)))
+								or
+								(a11/=0 and ((a01=a11 and a11 = a21) or (a10=a11 and a11=a12)))
+								or
+								(a22/=0 and ((a22=a12 and a12 = a02) or (a22=a21 and a21=a20)))
+							then
 								OVER<=1;
 							end if;
 					end if;
