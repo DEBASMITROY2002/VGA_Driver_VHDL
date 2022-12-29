@@ -4,6 +4,6 @@
 ##### Fetch the MimasV2TopModuleLX9.vhd, MimasV2VGADisplay.vhd, VGAOut.vhd and clocking.vhd module.
 ##### Modify the .ucf file according to the Development Board you are using.
 ##### Output
-! sampleOutPut.png
+! [](./sampleOutPut.png)
 BOARD DOCUMENTATION: https://numato.com/product/mimas-v2-spartan-6-fpga-development-board-with-ddr-sdram/
 
