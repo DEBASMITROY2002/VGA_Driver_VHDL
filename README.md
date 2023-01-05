@@ -1,5 +1,5 @@
-####Authors:
-########Debasmit Roy
+#### Authors:
+######## Debasmit Roy
 
 # Tic-Tac-Toe game in Mimas V2 Spartan 6 FPGA Development Board
 # Xilinx ISE
