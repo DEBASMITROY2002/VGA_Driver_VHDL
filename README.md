@@ -2,6 +2,7 @@
 #### 1. Debasmit Roy
 #### 2. Anurup Naskar
 #### 3. Kushal Das
+#### 4. Imon Raj
 
 # Tic-Tac-Toe game in Mimas V2 Spartan 6 FPGA Development Board
 # Xilinx ISE
