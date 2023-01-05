@@ -1,3 +1,6 @@
+####Authors:
+########Debasmit Roy
+
 # Tic-Tac-Toe game in Mimas V2 Spartan 6 FPGA Development Board
 # Xilinx ISE
 ##### To generate the .bin file goto ./tic-tac-toe directory.
