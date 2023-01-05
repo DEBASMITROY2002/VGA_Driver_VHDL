@@ -1,6 +1,7 @@
 ## Authors:
 #### 1. Debasmit Roy
 #### 2. Anurup Naskar
+#### 3. Kushal Das
 
 # Tic-Tac-Toe game in Mimas V2 Spartan 6 FPGA Development Board
 # Xilinx ISE
